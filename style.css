@@ -57,6 +57,11 @@ nav {
   display: inline-block;
 }
 
+.nav-divider {
+  color: rgba(255, 255, 255, 0.3);
+  margin: 0 5px;
+}
+
 nav a {
   color: var(--accent-color);
   text-decoration: none;
@@ -64,11 +69,32 @@ nav a {
   border-radius: 4px;
   transition: all 0.3s ease;
   white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.thoughts-link {
+  background: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(0, 176, 240, 0.2);
 }
 
 nav a:hover {
   background: rgba(255, 255, 255, 0.1);
   color: white;
+  transform: translateY(-1px);
+}
+
+.thoughts-link:hover {
+  background: #1ac0ff;
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 176, 240, 0.3);
 }
 
 section {
@@ -257,5 +283,14 @@ a[href^="mailto:"]:hover {
   nav a {
     padding: 4px 12px;
     font-size: 0.95em;
+  }
+
+  .thoughts-link {
+    padding: 6px 16px;
+    margin-top: 4px;
+  }
+
+  .nav-divider {
+    display: none;
   }
 }
